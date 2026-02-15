@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Course Portal</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            color: white;
+            min-height: 100vh;
+        }
+
+        /* 🔥 Highlighted Heading */
+        .animated-heading {
+            font-size: 3rem;
+            font-weight: 800;
+            text-align: center;
+            color: #00e5ff;
+            text-shadow: 
+                0 0 10px rgba(0, 229, 255, 0.7),
+                0 0 20px rgba(0, 229, 255, 0.5),
+                0 0 30px rgba(0, 229, 255, 0.3);
+            position: relative;
+            display: inline-block;
+        }
+
+        .animated-heading::after {
+            content: "";
+            width: 0%;
+            height: 4px;
+            background: #00e5ff;
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            border-radius: 10px;
+            animation: underlineGrow 2s ease forwards;
+        }
+
+        @keyframes underlineGrow {
+            to { width: 100%; }
+        }
+
+        .hero {
+            text-align: center;
+            padding: 80px 20px 40px 20px;
+        }
+
+        .hero p {
+            margin-top: 25px;
+            font-size: 1.1rem;
+            max-width: 750px;
+            margin-left: auto;
+            margin-right: auto;
+            color: #e0f7ff;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(12px);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            transition: 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+        }
+
+        .feature-card i {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: #00e5ff;
+        }
+
+        .feature-card h4 {
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .feature-card p {
+            color: #d0f0ff;
+        }
+
+        .cta {
+            margin-top: 70px;
+            text-align: center;
+            padding-bottom: 60px;
+        }
+
+        .cta h3 {
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .btn-custom {
+            background: #00e5ff;
+            border: none;
+            padding: 12px 35px;
+            border-radius: 30px;
+            transition: 0.3s;
+            font-weight: 600;
+        }
+
+        .btn-custom:hover {
+            background: #0099cc;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+
+    <%- include('partials/navbar') %>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1 class="animated-heading">About Our Course Portal</h1>
+        <p>
+            Our mission is to empower students with industry-ready skills through 
+            practical learning and expert guidance. We focus on real-world knowledge, 
+            hands-on projects, and career growth opportunities.
+        </p>
+    </div>
+
+    <!-- Features -->
+    <div class="container mt-5">
+        <div class="row g-4">
+
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <i class="fas fa-laptop-code"></i>
+                    <h4>Practical Learning</h4>
+                    <p>Real projects and hands-on experience to build confidence and skills.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <i class="fas fa-user-graduate"></i>
+                    <h4>Expert Mentorship</h4>
+                    <p>Learn directly from experienced industry professionals.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <i class="fas fa-rocket"></i>
+                    <h4>Career Growth</h4>
+                    <p>Boost your career with structured learning and modern technologies.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Call to Action -->
+    <div class="cta">
+        <h3>Ready to start your journey?</h3>
+        <a href="/course" class="btn btn-custom text-light  ">
+            Explore Courses
+        </a>
+    </div>
+
+    <%- include('partials/footer') %>
+
+</body>
+</html>

@@ -1,0 +1,71 @@
+1.syntax to create functional component
+import react from 'react'
+
+const App=()=>{
+    return(
+        <>
+        <h1> hello this is funtional component</h1>
+        </>
+    )
+}
+
+export default App;
+
+
+2.syntax for use state
+
+const[cound,setcount]=useState();
+
+3.syntax for useEffect
+ useEffect=()=>{
+    code//
+ }
+
+4,5. with dependancy and useEffect runs only once
+
+useEffect=(()=>{
+  code//
+},[])
+
+
+6.setup to install react router
+npm install react-router-dom
+<Routes>
+<Route path='/' element={} />
+</Routes>
+
+7.Write basic routing setup using BrowserRouter, Routes, and Route.
+
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>
+);
+
+8.Write syntax for navigation using Link.
+
+import {Link} from 'react-router-dom';
+
+function Nav=()=>{
+    return(
+        <nav>
+        <Link to='/'> Home Page</Link>
+        </nav>
+    )
+}
+
+9️. Write syntax to get route parameter using useParams.
+import { useParams } from "react-router-dom";
+
+function User() {
+  const { id } = useParams();
+
+  return <h1>id : {id}</h1>;
+}
+
+export default User;
+
+10. Write syntax for conditional rendering using ternary operator in JSX
+
+{ condition ? give the if code : give code in else }
+
